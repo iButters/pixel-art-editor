@@ -1,0 +1,54 @@
+import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ZoomControl } from './ZoomControl';
+
+const meta: Meta<typeof ZoomControl> = {
+  title: 'Molecules/ZoomControl',
+  component: ZoomControl,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+};
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  render: () => {
+    const [zoom, setZoom] = useState(8);
+    return (
+      <ZoomControl
+        zoom={zoom}
+        onZoomIn={() => setZoom(Math.min(32, zoom * 2))}
+        onZoomOut={() => setZoom(Math.max(1, zoom / 2))}
+      />
+    );
+  },
+};
+
+export const MinZoom: Story = {
+  render: () => {
+    const [zoom, setZoom] = useState(1);
+    return (
+      <ZoomControl
+        zoom={zoom}
+        onZoomIn={() => setZoom(Math.min(32, zoom * 2))}
+        onZoomOut={() => setZoom(Math.max(1, zoom / 2))}
+      />
+    );
+  },
+};
+
+export const MaxZoom: Story = {
+  render: () => {
+    const [zoom, setZoom] = useState(32);
+    return (
+      <ZoomControl
+        zoom={zoom}
+        onZoomIn={() => setZoom(Math.min(32, zoom * 2))}
+        onZoomOut={() => setZoom(Math.max(1, zoom / 2))}
+      />
+    );
+  },
+};

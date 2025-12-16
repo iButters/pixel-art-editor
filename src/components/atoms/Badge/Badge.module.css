@@ -1,0 +1,53 @@
+/* Badge - Small label component */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Sizes */
+.sm {
+  padding: var(--space-0-5) var(--space-1);
+  font-size: var(--text-xs);
+  min-height: 18px;
+}
+
+.md {
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+  min-height: 24px;
+}
+
+/* Variants */
+.default {
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+.primary {
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+.success {
+  background: var(--color-success);
+  color: var(--color-background);
+}
+
+.warning {
+  background: var(--color-warning);
+  color: #000;
+}
+
+.error {
+  background: var(--color-error);
+  color: #fff;
+}

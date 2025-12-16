@@ -1,0 +1,128 @@
+/* Design Tokens as CSS Custom Properties */
+/* GameBoy-inspired Pixel Art Editor Theme */
+
+:root {
+  /* Typography */
+  --font-mono: 'Courier New', Consolas, 'Liberation Mono', monospace;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --text-xs: 0.625rem;
+  --text-sm: 0.75rem;
+  --text-md: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+
+  /* Spacing */
+  --space-px: 1px;
+  --space-0: 0;
+  --space-0-5: 0.125rem;
+  --space-1: 0.25rem;
+  --space-1-5: 0.375rem;
+  --space-2: 0.5rem;
+  --space-2-5: 0.625rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-full: 9999px;
+
+  /* Animations */
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+
+  --ease-linear: linear;
+  --ease-default: ease;
+  --ease-in: ease-in;
+  --ease-out: ease-out;
+  --ease-in-out: ease-in-out;
+  --ease-snap: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-pixel-sm: 2px 2px 0;
+  --shadow-pixel-md: 4px 4px 0;
+  --shadow-pixel-lg: 6px 6px 0;
+  --shadow-inset-sm: inset 2px 2px 0;
+  --shadow-inset-md: inset 4px 4px 0;
+}
+
+/* Dark Theme (Default) - Original GameBoy */
+:root,
+[data-theme="dark"] {
+  /* GameBoy greens */
+  --gb-darkest: #0f380f;
+  --gb-dark: #306230;
+  --gb-light: #8bac0f;
+  --gb-lightest: #9bbc0f;
+
+  /* UI Colors */
+  --color-background: #0f380f;
+  --color-surface: #1a4a1a;
+  --color-surface-hover: #245424;
+  --color-border: #306230;
+  --color-border-light: #4a7a4a;
+
+  --color-text: #9bbc0f;
+  --color-text-muted: #8bac0f;
+  --color-text-dim: #6a8a0f;
+
+  --color-primary: #9bbc0f;
+  --color-primary-hover: #b5d62f;
+  --color-accent: #8bac0f;
+
+  /* Semantic */
+  --color-error: #ff6b6b;
+  --color-success: #9bbc0f;
+  --color-warning: #ffd93d;
+
+  /* Shadows with theme color */
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Light Theme - GameBoy Pocket */
+[data-theme="light"] {
+  /* GameBoy Pocket grays */
+  --gb-darkest: #1a1a1a;
+  --gb-dark: #555555;
+  --gb-light: #aaaaaa;
+  --gb-lightest: #f0f0f0;
+
+  /* UI Colors */
+  --color-background: #e8e8e8;
+  --color-surface: #f5f5f5;
+  --color-surface-hover: #ffffff;
+  --color-border: #cccccc;
+  --color-border-light: #dddddd;
+
+  --color-text: #1a1a1a;
+  --color-text-muted: #555555;
+  --color-text-dim: #888888;
+
+  --color-primary: #1a1a1a;
+  --color-primary-hover: #333333;
+  --color-accent: #555555;
+
+  /* Semantic */
+  --color-error: #dc3545;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+
+  /* Shadows with theme color */
+  --shadow-color: rgba(0, 0, 0, 0.15);
+}

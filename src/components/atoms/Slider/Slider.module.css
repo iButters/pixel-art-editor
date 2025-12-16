@@ -1,0 +1,130 @@
+/* Slider - Range input with pixel styling */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.value {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.track {
+  position: relative;
+  height: 8px;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+}
+
+.input {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Thumb - WebKit */
+.input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--color-primary);
+  border: 2px solid var(--color-background);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-pixel-sm) var(--shadow-color);
+  cursor: grab;
+  transition: transform var(--duration-fast) var(--ease-snap);
+}
+
+.input::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.input::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* Thumb - Firefox */
+.input::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--color-primary);
+  border: 2px solid var(--color-background);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-pixel-sm) var(--shadow-color);
+  cursor: grab;
+  transition: transform var(--duration-fast) var(--ease-snap);
+}
+
+.input::-moz-range-thumb:hover {
+  transform: scale(1.1);
+}
+
+.input::-moz-range-thumb:active {
+  cursor: grabbing;
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/* Focus */
+.input:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.input:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Disabled */
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input:disabled::-webkit-slider-thumb {
+  cursor: not-allowed;
+}
+
+.input:disabled::-moz-range-thumb {
+  cursor: not-allowed;
+}

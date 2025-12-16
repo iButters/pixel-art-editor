@@ -1,0 +1,61 @@
+/* ColorPicker - Color selection with picker */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  position: relative;
+}
+
+.label {
+  color: var(--color-text-muted);
+}
+
+.picker {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.hex {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: var(--space-2);
+  z-index: 100;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  box-shadow: var(--shadow-pixel-md) var(--shadow-color);
+}
+
+.nativeInput {
+  width: 150px;
+  height: 150px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.nativeInput::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.nativeInput::-webkit-color-swatch {
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}

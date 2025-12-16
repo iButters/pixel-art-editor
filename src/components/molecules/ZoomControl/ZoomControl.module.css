@@ -1,0 +1,14 @@
+/* ZoomControl - Zoom in/out with percentage display */
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.value {
+  min-width: 50px;
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}

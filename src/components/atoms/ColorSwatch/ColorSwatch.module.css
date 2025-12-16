@@ -1,0 +1,73 @@
+/* ColorSwatch - Color selection button */
+
+.swatch {
+  position: relative;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-snap);
+  box-shadow: var(--shadow-pixel-sm) var(--shadow-color);
+}
+
+.bordered {
+  border: 2px solid var(--color-border);
+}
+
+/* Sizes */
+.sm {
+  width: 20px;
+  height: 20px;
+}
+
+.md {
+  width: 28px;
+  height: 28px;
+}
+
+.lg {
+  width: 36px;
+  height: 36px;
+}
+
+/* Hover */
+.swatch:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-pixel-md) var(--shadow-color);
+}
+
+.swatch:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Active state */
+.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary);
+}
+
+.active:hover:not(:disabled) {
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary);
+}
+
+/* Checkmark for active state */
+.checkmark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: bold;
+}
+
+/* Light color indicator (add checkerboard for very light colors) */
+.swatch[data-light="true"] {
+  border-color: var(--color-border-light);
+}
+
+/* Disabled */
+.swatch:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,22 @@
+/* Canvas - Main drawing area */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: var(--space-4);
+  overflow: auto;
+  background: var(--color-background);
+}
+
+.canvas {
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-pixel-md) var(--shadow-color);
+  cursor: crosshair;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Custom cursor for different tools could be added here */

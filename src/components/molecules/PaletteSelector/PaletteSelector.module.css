@@ -1,0 +1,88 @@
+/* PaletteSelector - Dropdown for retro palettes */
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  color: var(--color-text-muted);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-width: 120px;
+}
+
+.arrow {
+  font-size: var(--text-xs);
+  opacity: 0.7;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: var(--space-1);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pixel-md) var(--shadow-color);
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+  padding: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--duration-fast) var(--ease-default);
+}
+
+.option:hover {
+  background: var(--color-surface-hover);
+}
+
+.option.active {
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+.option:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.preview {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.more {
+  font-size: var(--text-xs);
+  color: var(--color-text-dim);
+  margin-left: var(--space-1);
+}
+
+.active .more {
+  color: inherit;
+  opacity: 0.7;
+}

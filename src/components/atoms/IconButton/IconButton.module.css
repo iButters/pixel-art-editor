@@ -1,0 +1,79 @@
+/* IconButton - Square button with icon */
+
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-snap);
+  user-select: none;
+}
+
+/* Default variant */
+.default {
+  box-shadow: var(--shadow-pixel-sm) var(--shadow-color);
+}
+
+.default:hover:not(:disabled) {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-border-light);
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-pixel-md) var(--shadow-color);
+}
+
+.default:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* Ghost variant */
+.ghost {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.ghost:hover:not(:disabled) {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+}
+
+/* Sizes */
+.sm {
+  width: 28px;
+  height: 28px;
+}
+
+.md {
+  width: 36px;
+  height: 36px;
+}
+
+.lg {
+  width: 44px;
+  height: 44px;
+}
+
+/* Active state */
+.active {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border-color: var(--color-primary);
+}
+
+.active:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+/* Disabled */
+.iconButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
