@@ -26,7 +26,7 @@
 
 .label {
   color: var(--color-text-dim);
-  font-size: 10px;
+  font-size: var(--text-xs);
 }
 
 .sizeButtons {

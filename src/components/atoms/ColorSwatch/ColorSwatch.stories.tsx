@@ -11,13 +11,28 @@ const meta: Meta<typeof ColorSwatch> = {
   argTypes: {
     color: {
       control: 'color',
+      description: 'The color to display in the swatch (hex, rgb, or hsl)',
     },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
+      description: 'Swatch size: sm (20px), md (28px), lg (36px)',
     },
     active: {
       control: 'boolean',
+      description: 'Whether the swatch is selected/active (shows border highlight)',
+    },
+    showBorder: {
+      control: 'boolean',
+      description: 'Whether to show a border around the swatch',
+    },
+    onClick: {
+      action: 'clicked',
+      description: 'Click event handler for color selection',
+    },
+    onContextMenu: {
+      action: 'contextMenu',
+      description: 'Right-click event handler (e.g., for secondary color)',
     },
   },
 };

@@ -10,6 +10,34 @@ const meta: Meta<typeof ToolButton> = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    tool: {
+      control: 'select',
+      options: ['pencil', 'eraser', 'fill', 'picker', 'line', 'rectangle'],
+      description: 'The tool type this button represents',
+    },
+    icon: {
+      control: 'select',
+      options: ['pencil', 'eraser', 'fill', 'picker', 'line', 'rectangle'],
+      description: 'Icon to display in the button',
+    },
+    label: {
+      control: 'text',
+      description: 'Accessible label and tooltip text for the tool',
+    },
+    shortcut: {
+      control: 'text',
+      description: 'Keyboard shortcut displayed in the tooltip',
+    },
+    active: {
+      control: 'boolean',
+      description: 'Whether this tool is currently selected/active',
+    },
+    onSelect: {
+      action: 'selected',
+      description: 'Callback when the tool is selected',
+    },
+  },
 };
 
 export default meta;

@@ -78,15 +78,15 @@
 
 .danger {
   background-color: var(--color-error);
-  color: #ffffff;
+  color: var(--color-text-on-error);
   border-color: var(--color-error);
-  box-shadow: var(--shadow-pixel-sm) rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-pixel-sm) var(--shadow-color);
 }
 
 .danger:hover:not(:disabled) {
   filter: brightness(1.1);
   transform: translate(-1px, -1px);
-  box-shadow: var(--shadow-pixel-md) rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-pixel-md) var(--shadow-color);
 }
 
 .danger:active:not(:disabled),

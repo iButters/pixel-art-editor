@@ -17,10 +17,16 @@ const meta: Meta<typeof PixelIcon> = {
         'plus', 'minus', 'play', 'pause', 'trash', 'download', 'copy',
         'sun', 'moon', 'check',
       ],
+      description: 'The icon to display. Pixel art style icons for tools and UI actions.',
     },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
+      description: 'Icon size: sm (12px), md (16px), lg (24px)',
+    },
+    className: {
+      control: 'text',
+      description: 'Additional CSS class for custom styling',
     },
   },
 };

@@ -19,7 +19,7 @@
 .sectionTitle {
   color: var(--color-text-dim);
   text-align: center;
-  font-size: 9px;
+  font-size: var(--text-xs);
 }
 
 .tools {

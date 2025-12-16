@@ -44,10 +44,10 @@
 
 .warning {
   background: var(--color-warning);
-  color: #000;
+  color: var(--color-text-on-warning);
 }
 
 .error {
   background: var(--color-error);
-  color: #fff;
+  color: var(--color-text-on-error);
 }

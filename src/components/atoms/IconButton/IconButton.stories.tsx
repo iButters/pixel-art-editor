@@ -12,20 +12,29 @@ const meta: Meta<typeof IconButton> = {
     icon: {
       control: 'select',
       options: ['pencil', 'eraser', 'fill', 'picker', 'line', 'rectangle', 'undo', 'redo'],
+      description: 'The icon to display inside the button',
     },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
+      description: 'Button size: sm (28px), md (36px), lg (44px)',
     },
     variant: {
       control: 'select',
       options: ['default', 'ghost'],
+      description: 'Visual style variant. Ghost has no border/background by default.',
     },
     active: {
       control: 'boolean',
+      description: 'Whether the button is in active/selected state',
     },
     disabled: {
       control: 'boolean',
+      description: 'Whether the button is disabled and non-interactive',
+    },
+    onClick: {
+      action: 'clicked',
+      description: 'Click event handler',
     },
   },
 };

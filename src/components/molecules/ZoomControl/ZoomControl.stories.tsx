@@ -9,6 +9,20 @@ const meta: Meta<typeof ZoomControl> = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    zoom: {
+      control: { type: 'number', min: 1, max: 32, step: 1 },
+      description: 'Current zoom level (1-32x)',
+    },
+    onZoomIn: {
+      action: 'zoomIn',
+      description: 'Callback when zoom in button is clicked',
+    },
+    onZoomOut: {
+      action: 'zoomOut',
+      description: 'Callback when zoom out button is clicked',
+    },
+  },
 };
 
 export default meta;
